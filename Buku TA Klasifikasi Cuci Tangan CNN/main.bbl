@@ -1,59 +1,36 @@
-\begin{thebibliography}{9}
-\providecommand{\natexlab}[1]{#1}
-\providecommand{\url}[1]{\texttt{#1}}
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{doi: #1}\else
-  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+\begin{thebibliography}{10}
 
-\bibitem[WorldOMeters(2021)]{cit:covidcase}
-WorldOMeters.
-\newblock Coronavirus cases, 2021.
-\newblock URL \url{https://www.worldometers.info/coronavirus/}.
+\bibitem{cit:covidcase}
+WorldOMeters, ``Coronavirus cases,'' 2021.
 
-\bibitem[Gietgey(2016)]{cit:kuda}
-Adam Gietgey.
-\newblock Machine learning is fun! part 3: Deep learning and convolutional
-  neural networks, 2016.
-\newblock URL
-  \url{https://medium.com/@ageitgey/machine-learning-is-fun-part-3-deep-learning-and-convolutional-neural-networks-f40359318721}.
+\bibitem{cit:cnn}
+Q.~Lina, ``Apa itu convolutional neural network?,'' 2019.
 
-\bibitem[Lina(2019)]{cit:cnn}
-Qobliyatul Lina.
-\newblock Apa itu convolutional neural network?, 2019.
-\newblock URL
-  \url{https://medium.com/@16611110/apa-itu-convolutional-neural-network-836f70b193a4}.
+\bibitem{cit:effnet}
+M.~Tan and Q.~V. Le, ``Efficientnet: Rethinking model scaling for convolutional
+  neural networks,'' 2020.
 
-\bibitem[Organization(2020)]{cit:copid}
-World~Health Organization.
-\newblock Coronavirus disease (covid-19), 2020.
-\newblock URL
-  \url{https://www.who.int/emergencies/diseases/novel-coronavirus-2019}.
+\bibitem{cit:kaggledata}
+real timeAR, ``Sample: Hand wash dataset,'' 2020.
 
-\bibitem[Sehat(2021)]{cit:cucisabun}
-Hallo Sehat.
-\newblock Kemenko pmk: Kesadaran cuci tangan pakai sabun meningkat tajam, 2021.
-\newblock URL
-  \url{https://www.antaranews.com/berita/1785433/kemenko-pmk-kesadaran-cuci-tangan-pakai-sabun-meningkat-tajam}.
+\bibitem{cit:wb500}
+Tokopedia, ``M-tech wb500,'' 2021.
 
-\bibitem[Sehat(2020)]{cit:salahcuci}
-Hallo Sehat.
-\newblock cara-cuci-tangan-yang-salah, 2020.
-\newblock URL
-  \url{https://hellosehat.com/hidup-sehat/tips-sehat/cara-cuci-tangan-yang-salah}.
+\bibitem{cit:100d}
+C.~UK, ``Canon eos 100d,'' 2013.
 
-\bibitem[Tan and Le(2020)]{cit:effnet}
-Mingxing Tan and Quoc~V. Le.
-\newblock Efficientnet: Rethinking model scaling for convolutional neural
-  networks, 2020.
+\bibitem{cit:copid}
+W.~H. Organization, ``Coronavirus disease (covid-19),'' 2020.
 
-\bibitem[Xie et~al.(2020)Xie, Luong, Hovy, and Le]{cit:noisy}
-Qizhe Xie, Minh-Thang Luong, Eduard Hovy, and Quoc~V. Le.
-\newblock Self-training with noisy student improves imagenet classification,
-  2020.
+\bibitem{cit:cucisabun}
+H.~Sehat, ``Kemenko pmk: Kesadaran cuci tangan pakai sabun meningkat tajam,''
+  2021.
 
-\bibitem[Newton(1687)]{newton1687}
-Isaac Newton.
-\newblock Axioms or laws of motion.
-\newblock \emph{Philosophiæ Naturalis Principia Mathematica}, 1687.
+\bibitem{cit:salahcuci}
+H.~Sehat, ``cara-cuci-tangan-yang-salah,'' 2020.
+
+\bibitem{cit:noisy}
+Q.~Xie, M.-T. Luong, E.~Hovy, and Q.~V. Le, ``Self-training with noisy student
+  improves imagenet classification,'' 2020.
 
 \end{thebibliography}

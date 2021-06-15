@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.6.8)  9 JUN 2021 18:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.6.10)  13 JUN 2021 14:31
 entering extended mode
 **./main.tex
 (main.tex
@@ -78,7 +78,7 @@ f
 Language: indonesian 2017/02/15 v1.0m Bahasa Indonesia support from the babel s
 ystem
 )) (C:\Program Files\MiKTeX\tex/latex/hyperref\hyperref.sty
-Package: hyperref 2021-06-05 v7.00l Hypertext links for LaTeX
+Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
 
 (C:\Users\habi6\AppData\Roaming\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
@@ -120,12 +120,12 @@ Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 \Hy@pagecounter=\count197
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def
-File: pd1enc.def 2021-06-05 v7.00l Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
 (C:\Program Files\MiKTeX\tex/latex/hyperref\hyperref-langpatches.def
-File: hyperref-langpatches.def 2021-06-05 v7.00l Hyperref: patches for babel la
+File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
 nguages
 )
 (C:\Users\habi6\AppData\Roaming\MiKTeX\tex/generic/intcalc\intcalc.sty
@@ -137,7 +137,7 @@ Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 \Hy@SavedSpaceFactor=\count198
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def
-File: puenc.def 2021-06-05 v7.00l Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
@@ -197,7 +197,7 @@ package with kernel methods
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\hpdftex.def
-File: hpdftex.def 2021-06-05 v7.00l Hyperref driver for pdfTeX
+File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
 
 (C:\Program Files\MiKTeX\tex/latex/base\atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
@@ -401,6 +401,8 @@ Package: wrapfig 2003/01/31  v 3.6
 (C:\Users\habi6\AppData\Roaming\MiKTeX\tex/latex/xurl\xurl.sty
 Package: xurl 2020/12/30 v 0.09a modify URL breaks
 )
+   defining Unicode char U+25CF (decimal 9679)
+
 (C:\Users\habi6\AppData\Roaming\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
 rs
@@ -451,31 +453,31 @@ File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 9
-4.
+5.
 
 (C:\Program Files\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -511,7 +513,7 @@ LaTeX Font Info:    ... okay on input line 94.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 94.
+Package hyperref Info: Link coloring OFF on input line 95.
 (C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -524,9 +526,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count295
 )
-LaTeX Info: Redefining \ref on input line 94.
-LaTeX Info: Redefining \pageref on input line 94.
-LaTeX Info: Redefining \nameref on input line 94.
+LaTeX Info: Redefining \ref on input line 95.
+LaTeX Info: Redefining \pageref on input line 95.
+LaTeX Info: Redefining \nameref on input line 95.
  (main.out) (main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
@@ -597,7 +599,7 @@ File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <12> not available
 (Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 8.
 )
-<sampul/gambar/sampul-luar.png, id=121, 421.0932pt x 597.432pt>
+<sampul/gambar/sampul-luar.png, id=137, 421.0932pt x 597.432pt>
 File: sampul/gambar/sampul-luar.png Graphic file (type png)
 <use sampul/gambar/sampul-luar.png>
 Package pdftex.def Info: sampul/gambar/sampul-luar.png  used on input line 40.
@@ -646,7 +648,7 @@ er (name{page.1}) has been already used, duplicate ignored
                    \relax 
 l.37 \restoregeometry
                      
-<sampul/gambar/sampul-dalam.png, id=130, 421.0932pt x 597.432pt>
+<sampul/gambar/sampul-dalam.png, id=146, 421.0932pt x 597.432pt>
 File: sampul/gambar/sampul-dalam.png Graphic file (type png)
 <use sampul/gambar/sampul-dalam.png>
 Package pdftex.def Info: sampul/gambar/sampul-dalam.png  used on input line 37.
@@ -781,7 +783,7 @@ l.17 \newpage
               [1
 
 ]
-<gambar/worldometer.PNG, id=290, 668.4975pt x 336.50719pt>
+<gambar/worldometer.PNG, id=341, 668.4975pt x 336.50719pt>
 File: gambar/worldometer.PNG Graphic file (type png)
 <use gambar/worldometer.PNG>
 Package pdftex.def Info: gambar/worldometer.PNG  used on input line 22.
@@ -805,173 +807,229 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.64 \newpage
-              [3])pdfTeX warning (ext4): destination with the same identifier (
-name{page.4}) has been already used, duplicate ignored
+              [3]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.166   \cleardoublepage
-                         [4] (bab/2-tinjauan-pustaka.tex
+l.100 \end{enumerate}
+                      [4])pdfTeX warning (ext4): destination with the same iden
+tifier (name{page.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.167   \cleardoublepage
+                         [5]pdfTeX warning (ext4): destination with the same id
+entifier (name{page.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.167   \cleardoublepage
+                         [6
+
+] (bab/2-tinjauan-pustaka.tex
 Bab 2.
-<gambar/kuda-kudaan.jpeg, id=322, 702.625pt x 467.7475pt>
-File: gambar/kuda-kudaan.jpeg Graphic file (type jpg)
-<use gambar/kuda-kudaan.jpeg>
-Package pdftex.def Info: gambar/kuda-kudaan.jpeg  used on input line 16.
-(pdftex.def)             Requested size: 205.14348pt x 136.564pt.
 
-Underfull \vbox (badness 7012) has occurred while \output is active []
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.29 
-      [5
+LaTeX Warning: Reference `fig:kudakudaan' on page 7 undefined on input line 11.
 
 
- <./gambar/kuda-kudaan.jpeg>]
-<gambar/pecahkuda.png, id=330, 4602.19376pt x 2916.8975pt>
-File: gambar/pecahkuda.png Graphic file (type png)
-<use gambar/pecahkuda.png>
-Package pdftex.def Info: gambar/pecahkuda.png  used on input line 39.
-(pdftex.def)             Requested size: 205.14348pt x 130.00848pt.
-<gambar/singletile.png, id=332, 760.8425pt x 275.0275pt>
-File: gambar/singletile.png Graphic file (type png)
-<use gambar/singletile.png>
-Package pdftex.def Info: gambar/singletile.png  used on input line 54.
-(pdftex.def)             Requested size: 205.14348pt x 74.15349pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.62 	
-       [6 <./gambar/pecahkuda.png (PNG copy)>]
-<gambar/outputarray.png, id=340, 896.34875pt x 731.73375pt>
-File: gambar/outputarray.png Graphic file (type png)
-<use gambar/outputarray.png>
-Package pdftex.def Info: gambar/outputarray.png  used on input line 71.
-(pdftex.def)             Requested size: 205.14348pt x 167.46898pt.
+<gambar/cnn.jpeg, id=379, 1259.70625pt x 425.59pt>
+File: gambar/cnn.jpeg Graphic file (type jpg)
+<use gambar/cnn.jpeg>
+Package pdftex.def Info: gambar/cnn.jpeg  used on input line 19.
+(pdftex.def)             Requested size: 293.0634pt x 99.0071pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.80 	P
-       ada langkah 3, array masih terlalu besar yang mana jumlah parameterny...
-[7 <./gambar/singletile.png (PNG copy)> <./gambar/outputarray.png (PNG copy)>]
-<gambar/maxpooling.png, id=346, 890.32625pt x 371.3875pt>
-File: gambar/maxpooling.png Graphic file (type png)
-<use gambar/maxpooling.png>
-Package pdftex.def Info: gambar/maxpooling.png  used on input line 86.
-(pdftex.def)             Requested size: 263.75526pt x 110.02304pt.
-<gambar/cnn.jpeg, id=348, 1259.70625pt x 425.59pt>
-File: gambar/cnn.jpeg Graphic file (type jpg)
-<use gambar/cnn.jpeg>
-Package pdftex.def Info: gambar/cnn.jpeg  used on input line 101.
-(pdftex.def)             Requested size: 263.75526pt x 89.11028pt.
+l.32 
+      [7
+
+ <./gambar/cnn.jpeg>]
+<gambar/rgbhorse.jpeg, id=384, 728.7225pt x 742.775pt>
+File: gambar/rgbhorse.jpeg Graphic file (type jpg)
+<use gambar/rgbhorse.jpeg>
+Package pdftex.def Info: gambar/rgbhorse.jpeg  used on input line 39.
+(pdftex.def)             Requested size: 205.14348pt x 209.09763pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.109 
-       [8 <./gambar/maxpooling.png (PNG copy)> <./gambar/cnn.jpeg>]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-28.
-
-(C:\Program Files\MiKTeX\tex/latex/lm\ts1lmr.fd
+l.50 	K
+       etiga filter ini akan digeser keseluruh bagian dari gambar. Setiap pe...
+[8 <./gambar/rgbhorse.jpeg>]
+<gambar/convpool.png, id=391, 582.67688pt x 517.18219pt>
+File: gambar/convpool.png Graphic file (type png)
+<use gambar/convpool.png>
+Package pdftex.def Info: gambar/convpool.png  used on input line 56.
+(pdftex.def)             Requested size: 263.75526pt x 234.11086pt.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 6
+6.
+ (C:\Program Files\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [9] [10]) [11] [12
+)
+[9 <./gambar/convpool.png>] [10]
+<gambar/poolinglayer.jpeg, id=407, 789.95125pt x 369.38pt>
+File: gambar/poolinglayer.jpeg Graphic file (type jpg)
+<use gambar/poolinglayer.jpeg>
+Package pdftex.def Info: gambar/poolinglayer.jpeg  used on input line 119.
+(pdftex.def)             Requested size: 205.14348pt x 95.9238pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11] [12 <./gambar/poolinglayer.jpeg>]
+<gambar/arsitekturefn.png, id=426, 1606.0pt x 331.2375pt>
+File: gambar/arsitekturefn.png Graphic file (type png)
+<use gambar/arsitekturefn.png>
+Package pdftex.def Info: gambar/arsitekturefn.png  used on input line 167.
+(pdftex.def)             Requested size: 293.0634pt x 60.44402pt.
+
+Overfull \hbox (0.18466pt too wide) in paragraph at lines 175--176
+[]\OT1/lmr/m/n/10 AutoML MNAS ber-ker-ja de-ngan men-co-ba un-tuk men-ca-pai ak
+u-
+ []
+
+[13 <./gambar/arsitekturefn.png>]
+<gambar/modelscaling.png, id=433, 1156.32pt x 578.16pt>
+File: gambar/modelscaling.png Graphic file (type png)
+<use gambar/modelscaling.png>
+Package pdftex.def Info: gambar/modelscaling.png  used on input line 184.
+(pdftex.def)             Requested size: 263.75526pt x 131.87125pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14 <./gambar/modelscaling.png>]
+<gambar/akurasiefn.png, id=440, 1606.0pt x 1266.7325pt>
+File: gambar/akurasiefn.png Graphic file (type png)
+<use gambar/akurasiefn.png>
+Package pdftex.def Info: gambar/akurasiefn.png  used on input line 205.
+(pdftex.def)             Requested size: 263.75526pt x 208.0354pt.
+) [15 <./gambar/akurasiefn.png>] [16
 
 ]
 (bab/3-desain-implementasi.tex
 Bab 3.
+<gambar/AlurKerja.png, id=451, 819.06pt x 548.80031pt>
+File: gambar/AlurKerja.png Graphic file (type png)
+<use gambar/AlurKerja.png>
+Package pdftex.def Info: gambar/AlurKerja.png  used on input line 12.
+(pdftex.def)             Requested size: 205.14348pt x 137.45094pt.
+[17
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ <./gambar/AlurKerja.png>]
+<gambar/sampledatasetkaggle.png, id=461, 1192.455pt x 718.93594pt>
+File: gambar/sampledatasetkaggle.png Graphic file (type png)
+<use gambar/sampledatasetkaggle.png>
+Package pdftex.def Info: gambar/sampledatasetkaggle.png  used on input line 70.
 
- [13
+(pdftex.def)             Requested size: 263.75526pt x 159.0111pt.
+ [18]
+<gambar/webcam2.jpeg, id=476, 722.7pt x 861.9703pt>
+File: gambar/webcam2.jpeg Graphic file (type jpg)
+<use gambar/webcam2.jpeg>
+Package pdftex.def Info: gambar/webcam2.jpeg  used on input line 101.
+(pdftex.def)             Requested size: 205.14348pt x 244.67764pt.
+<gambar/contohwebcam1.png, id=477, 1156.32pt x 650.43pt>
+File: gambar/contohwebcam1.png Graphic file (type png)
+<use gambar/contohwebcam1.png>
+Package pdftex.def Info: gambar/contohwebcam1.png  used on input line 108.
+(pdftex.def)             Requested size: 234.45161pt x 131.87015pt.
+ [19 <./gambar/sampledatasetkaggle.png>]
 
-]
+LaTeX Warning: Text page 20 contains only floats.
+
+
+Overfull \vbox (3.24811pt too high) has occurred while \output is active []
+
+
+[20 <./gambar/webcam2.jpeg> <./gambar/contohwebcam1.png>] [21]
+<gambar/setupdata2.jpeg, id=497, 722.7pt x 723.45282pt>
+File: gambar/setupdata2.jpeg Graphic file (type jpg)
+<use gambar/setupdata2.jpeg>
+Package pdftex.def Info: gambar/setupdata2.jpeg  used on input line 181.
+(pdftex.def)             Requested size: 175.83983pt x 176.01665pt.
+<gambar/contohdslr2.png, id=498, 965.10562pt x 644.4075pt>
+File: gambar/contohdslr2.png Graphic file (type png)
+<use gambar/contohdslr2.png>
+Package pdftex.def Info: gambar/contohdslr2.png  used on input line 188.
+(pdftex.def)             Requested size: 234.45161pt x 156.53903pt.
+ [22 <./gambar/setupdata2.jpeg> <./gambar/contohdslr2.png>]
 (C:\Program Files\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-(C:\Program Files\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-(C:\Program Files\MiKTeX\tex/latex/listings\lstmisc.sty
-File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 23.
+nput line 209.
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-23.
+209.
 
 (C:\Program Files\MiKTeX\tex/latex/lm\ot1lmtt.fd
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
+) (program/bilangan-prima.py
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 24.
- [14]
-(C:\Program Files\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-(program/bilangan-prima.py)) [15] [16
+(Font)              <8> on input line 1.
+))
+[23] [24
 
 ] (bab/4-pengujian-analisis.tex
 Bab 4.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17
+ [25
 
 ])
-[18] [19] [20
+[26] [27] [28
 
 ] (bab/5-penutup.tex
 Bab 5.
-) [21
+) [29
 
-] [22
+] [30
 
-] (main.bbl) [23
+] (main.bbl) [31
 
-] [24
+] [32
 
 ] (lainnya/biografi-penulis.tex
-<gambar/elon.jpg, id=474, 578.16pt x 867.24pt>
+<gambar/elon.jpg, id=563, 578.16pt x 867.24pt>
 File: gambar/elon.jpg Graphic file (type jpg)
 <use gambar/elon.jpg>
 Package pdftex.def Info: gambar/elon.jpg  used on input line 14.
 (pdftex.def)             Requested size: 87.9199pt x 131.88007pt.
-) [25 <./gambar/elon.jpg>] [26
+) [33 <./gambar/elon.jpg>] [34
 
 ] (main.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E9D4B2348074350036A59908B71E69CA;4193.
+(rerunfilecheck)             Checksum: B467AF36D0932E3E55E4E9E2E5A55521;4967.
  ) 
 Here is how much of TeX's memory you used:
- 14232 strings out of 478864
- 209938 string characters out of 2858518
- 858632 words of memory out of 3000000
- 31688 multiletter control sequences out of 15000+600000
- 472063 words of font info for 64 fonts, out of 8000000 for 9000
+ 14193 strings out of 478864
+ 210392 string characters out of 2858517
+ 857424 words of memory out of 3000000
+ 31629 multiletter control sequences out of 15000+600000
+ 459995 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,12n,69p,866b,1385s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,12n,67p,866b,1442s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}{C:/Program Files/MiK
 TeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm
--mathsy.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Progr
-am Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Program Files/MiKTeX/fonts/en
-c/dvips/lm/lm-mathit.enc}<C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx10.
-pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files
-/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Program Files/MiKTeX/fonts/type1/
-public/lm/lmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi10.pfb>
-<C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKT
-eX/fonts/type1/public/lm/lmr5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/l
-m/lmr9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Progra
-m Files/MiKTeX/fonts/type1/public/lm/lmssbo10.pfb><C:/Program Files/MiKTeX/font
-s/type1/public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/l
-msy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Program
- Files/MiKTeX/fonts/type1/public/lm/lmtt8.pfb>
-Output written on main.pdf (47 pages, 12594954 bytes).
+-mathsy.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Progr
+am Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Program Files/MiKTeX/fonts/ty
+pe1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx12.
+pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Program File
+s/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/
+public/lm/lmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:
+/Program Files/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Program Files/MiKTeX/f
+onts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/
+lmssbo10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Pr
+ogram Files/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fo
+nts/type1/public/lm/lmtt8.pfb>
+Output written on main.pdf (55 pages, 7756275 bytes).
 PDF statistics:
- 580 PDF objects out of 1000 (max. 8388607)
- 132 named destinations out of 1000 (max. 500000)
- 291 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 666 PDF objects out of 1000 (max. 8388607)
+ 156 named destinations out of 1000 (max. 500000)
+ 358 words of extra memory for PDF output out of 10000 (max. 10000000)
 
