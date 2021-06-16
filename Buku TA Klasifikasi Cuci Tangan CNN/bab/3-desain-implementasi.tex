@@ -30,11 +30,11 @@ Alur implementasi dalam pengerjaan penelitian ini dibagi menjadi beberapa tahapa
 	\item Pengolahan Dataset
 	\item Pengembangan Sistem
 	\item Proses Training Dataset
-	\item Evaluasi Dataset
+	\item Evaluasi Sistem
 \end{enumerate}
 
-\subsection{Pengumpulan Dataset}
-\label{subsec:pengumpulandata}
+\section{Pengumpulan Dataset}
+\label{sec:pengumpulandata}
 
 Sebagian besar dataset yang digunakan pada penelitian ini berasal dari Kaggle \cite{cit:kaggledata}. isi dari dataset ini dapat dilihat pada tabel \ref{tab:kagglelist}
 % Please add the following required packages to your document preamble:
@@ -98,14 +98,14 @@ Pengambilan dataset pribadi yang pertama dilakukan di tempat tinggal penulis men
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.7\columnwidth]{gambar/webcam2.jpeg}
+	\includegraphics[width=0.67\columnwidth]{gambar/webcam2.jpeg}
 	\caption{Setup pengambilan dataset menggunakan webcam}
 	\label{fig:webcam2}
 \end{figure}
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.8\columnwidth]{gambar/contohwebcam1.png}
+	\includegraphics[width=0.85\columnwidth]{gambar/contohwebcam1.png}
 	\caption{Contoh hasil video webcam}
 	\label{fig:contohwebcam}
 \end{figure}
@@ -178,7 +178,7 @@ Setup pengambilan dan contoh hasil video dapat dilihat pada gambar \ref{fig:setu
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.6\columnwidth]{gambar/setupdata2.jpeg}
+	\includegraphics[width=0.65\columnwidth]{gambar/setupdata2.jpeg}
 	\caption{Contoh hasil Video DSLR}
 	\label{fig:setupdslr}
 \end{figure}
@@ -190,21 +190,187 @@ Setup pengambilan dan contoh hasil video dapat dilihat pada gambar \ref{fig:setu
 	\label{fig:contohdslr}
 \end{figure}
 
-\subsection{Pengolahan Dataset}
-\label{subsec:pengolahandataset}
+\section{Pengolahan Dataset}
+\label{sec:pengolahandataset}
 
 Pada pengolahan dataset, Dataset yang diambil dari kaggle diperiksa satu-persatu. Pada pemeriksaan ini, ditemukan kesalahan dalam struktural dataset tersebut. Struktur dataset kaggle diperbaiki agar sesuai dengan label nya. berberapa kesalahan pada struktur dataset kaggle ini antara lain gerakan tangan yang tertukar antara kanan dan kiri dan kesalahan peletakan dalam folder. Ditemukan pula kesalahan berupa "kontaminasi" gerakan yang berbeda pada satu video gerakan. Hal ini kemudian diperbaiki dengan membuang kontaminasi tersebut
 
 Dataset yang diambil secara pribadi dari Webcam dan DSLR juga diperiksa. kontaminasi juga ditemukan akibat ketidaksengajaan pada proses perekaman dan turut dibersihkan. kemudian berberapa video dengan durasi yang terlalu lama di potong menjadi 2 video terpisah. Dataset ini kemudian di \textit{encoding} ulang untuk mempermudah proses training.
 
+\section{Pengembangan Sistem}
+\label{sec:pengembangansistem}
+
+Pada tahap ini, sistem dikembangkan untuk dapat mengklasifikasikan gerakan cuci tangan. Sistem ini didasarkan oleh prinsip kerja \textit{Image Classification} berbasis CNN yang kemudian dilakukan movinf average dari outputnya agar dapat mengklasifikasikan sebuah gerakan dari hasil Image Classification tersebut.
+
+Untuk membuat sistem klasifikasi yang dibutuhkan, digunakan Model EfficientNet sebagai \textit{base model}. Model ini digunakan karena kemampuannya melakukan Image Classification secara Effisien dimana hanya membutuhkan resource yang sedikit untuk mencapai Akurasi yang cukup tinggi dibandingkan model \textit{Transfer Learning} lainnya, seperti yang dijelaskan pada bagian \ref{sec:effnet}
+
+Desain dari sistem klasifikasi pada penelitian ini terdiri dari berberapa tahapan yang harus dilalui. tahapan-tahapan tersebut adalah sebagai berikut:
+
+\newpage
+\begin{enumerate}[nolistsep]
+	\item Frame Extraction
+	\item Train \& Test Data Split
+	\item Preprocessing
+	\item Training
+	\item Klasifikasi Frame
+	\item Moving Average
+\end{enumerate}
+
+Tahapan-tahapan tersebut disusun bedarsarkan blok diagram yang dapat dilihat pada gambar \ref{fig:klasifikasi}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=1\columnwidth]{gambar/modelklasifikasi.png}
+	\caption{Sistem Klasifikasi Gerakan Cuci Tangan}
+	\label{fig:klasifikasi}
+\end{figure}
+
+\subsection{Frame Extraction}
+\label{subsec:framextraction}
+
+Pada tahap \textit{Frame Extraction}, Frame dari video di extract agar dapat diproses oleh model. Frame ini di extract secara random sebanyak 6000 frame untuk setiap class / label yang ada, hal ini dilakukan guna mendapatkan data yang beragam agar model yang sudah di training memiliki kemampun klasifikasi dengan akurasi yang cukup tinggi. Sampai disini, frame-frame tersebut masih terlalu besar untuk dapat di proses oleh EfficientNet-B0. EfficientNet-B0 hanya dapat memproses citra dalam resolusi 224 x 224 x 3, oleh karena itu frame-frame yang sudah di ekstraksi akan di \textit{resize} ke resolusi tersebut. Masing-masing frame yang sudah melalui tahap \textit{resize} kemudian akan dilabeli berdasarkan label pada video yang bersangkutan dan dimasukkan kedalam \textit{Numpy Array}.
+
+\newpage
+\subsection{Train \& Test Data Split}
+\label{subsec:traintestsplit}
+
+Pada tahap \textit{Train \& Test Data Split}, Array dari tahap \textit{Frame Extraction} kemudian akan dibagi kedalam \textit{Training Dataset} dan \textit{Test Dataset} dengan perbandingan 80 : 20. Training Dataset nantinya digunakan untuk melakukan training pada model sedangkan Test Dataset akan digunakan untuk mengevaluasi performa dari model yang sudah di training.
+
+\subsection{Preprocessing}
+\label{subsec:preprocessing}
+
+Preprocessing ditempatkan sebagai bagian dari model. Citra pada Training Dataset akan di augmentasi agar memiliki bentuk yang lebih beragam. Augmentasi yang dilakukan diantaranya sebagai berikut:
+\begin{itemize}
+	\item \textit{\textbf{Random Rotation}}
+	
+	Random Rotation atau Rotasi Acak dilakukan guna mendapatkan hasil citra yang sudah di rotasi secara acak. Ini dilakukan agar model dapat mengklasifikasikan sebuah citra meski citra tersebut tidak tegak lurus.
+	
+	\item \textit{\textbf{Random Translation}}
+	
+	Random Translation atau Translasi Acak dilakukan guna mendapatkan citra yang posisinya sudah digeser secara acak. Ini dilakukan agar model dapat mengklasifikasikan citra walau citra tersebut sedikit bergeser dari posisi yang seharusnya
+	
+	\item \textit{\textbf{Random Flip}}
+	
+	Random Flip atau Pembalikan Acak dilakukan guna mendapatkan citra yang dimensinya sudah dibalik secara acak. Ini dilakukan agar model dapat mengklasifikasikan sebuah citra meskipun dimensinya sudah dibalik.
+	
+	\item \textit{\textbf{RandomContrast}}
+	
+	Random Contrast atau Pergeseran Kontras Acak dilakukan guna mendapat citra dengan kontras yang beragam. Ini dilakukan agar model dapat mengklasifikasikan citra dengan kontras yang beragam yang biasanya terjadi akibat efek pengambilan gambar pada situasi pencahayaan yang berbeda ataupun gambar yang berasal dari sensor kamera yang memiliki intensitas yang berbeda.
+\end{itemize}
+
+Tujuan utama dari preprocessing ini adalah supaya model yang sudah di training dapat mengenali fitur pada citra dengan lebih mudah dan memberikan hasil klasifikasi yang lebih akurat jika dibandingkan dengan model yang sama tanpa menggunakan preprocessing pada fase training nya.
+
+Perlu diketahui pula, walaupun preprocessing ini ditempatkan sebagai bagian dari model, preprocessing ini hanya akan terjadi pada Training Dataset. Test Dataset maupun data lain yang sifatnya tidak mempengaruhi weight pada model tidak akan melalui tahap preprocessing ini.
+
 \subsection{Training}
-\label{subsec:trainigg}
+\label{subsec:training}
 
-\
-% Contoh input potongan kode dari file
-\lstinputlisting[
-  language=Python,
-  caption={Program perhitungan bilangan prima.},
-  label={lst:bilanganprima}
-]{program/bilangan-prima.py}
+Model dasar yang digunakan pada sistem ini adalah EfficientNet-B0 \cite{cit:effnet} seperti yang dijelaskan pada bagian \ref{sec:effnet} dengan konfigurasi sebagai berikut:
+\begin{lstlisting}[
+language=Python,
+caption={Konfigurasi EfficientNet},
+label={lst:effnetconfig}
+]
+efnb = tf.keras.applications.EfficientNetB0(
+	include_top=False,
+	weights="efficientnetb0_notop.h5",
+	input_shape=(224,224,3)
+	)
 
+for layer in efnb.layers[-20:]:
+	if not isinstance(layer, layers.BatchNormalization):
+		layer.trainable = True
+\end{lstlisting} 
+
+Karena gerakan mencuci tangan hanyalah sebagian kecil dari keseluruhan citra pada frame yang diklasifikasikan. Model ini dibantu dengan menggunakan weight checkpoint oleh NoisyStudent \cite{cit:noisy} guna mendapatkan akurasi yang cukup. Sebagian Layer dari Model \textit{Transfer Learning} EfficientNet ini juga diatur sebagai "trainable" agar model dapat mengenali gerakan tangan tersebut, yang bagi mesin/komputer, memiliki sedikit sekali perbedaan dengan frame lainnya pada satu video. Struktur Layer Pada Keseluruhan Model Klasifikasi ini dapat dilihat pada gambar \ref{fig:strukturmodel}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=1\columnwidth]{gambar/modelstructure.png}
+	\caption{Struktur Model Klasifikasi Gerakan Cuci Tangan}
+	\label{fig:strukturmodel}
+\end{figure}
+
+\newpage
+Proses Training pada model ini dilakukan sebanyak 25 \textit{Epoch}. Pada tahap ini pula, 20\% dari dataset diambil untuk keperluan validasi. \textit{Optimizer Adam}, dengan \textit{Learning Rate} 0.001 digunakan untuk mengupdate bias pada Neural Network menggunakan hasil validasi pada setiap Epoch. Keseluruhan Konfigurasi Training dapat dilihat pada \textit{Code Listing} \ref{lst:callback}, \ref{lst:compile} dan \ref{lst:modelfit}
+
+\newpage
+\begin{lstlisting}[
+	language=Python,
+	caption={Training Callbacks},
+	label={lst:callback}
+	]
+callbacks = [
+	ReduceLROnPlateau(
+	monitor='val_accuracy',
+	mode='max',
+	patience=7, 
+	verbose=1,
+	),
+	
+	EarlyStopping(
+	monitor = 'val_loss', 
+	mode='min',
+	patience = 10, 
+	restore_best_weights = True,
+	verbose=1
+	),
+	
+	ModelCheckpoint(
+	'chkp/CHKP-{epoch:02d}-{val_accuracy:.2f}.h5',
+	monitor='val_accuracy',
+	mode='max',
+	save_best_only = True,
+	verbose=1
+	)
+	]
+\end{lstlisting} 
+
+\begin{lstlisting}[
+	language=Python,
+	caption={Konfigurasi pada model.compile},
+	label={lst:compile}
+	]
+optimizers = tf.keras.optimizers.Adam(learning_rate=0.001)
+model.compile(loss = 'categorical_crossentropy', optimizer = optimizers, metrics = ["accuracy"])
+gc.collect()
+\end{lstlisting} 
+
+\begin{lstlisting}[
+	language=Python,
+	caption={Konfigurasi pada model.fit},
+	label={lst:modelfit}
+	]
+model_training_history = model.fit(x = features_train, y = labels_train, epochs = 25, batch_size = 12 , shuffle = True, validation_split = 0.2, callbacks = callbacks)
+gc.collect()
+\end{lstlisting} 
+
+\pagebreak
+\subsection{Klasifikasi Frame}
+\label{subsec:klasifikasiframe}
+
+Setelah model berhasil di training maka akan didapatkan weight dari model tersebut, weight ini kemudian dapat digunakan pada tahap Klasifikasi Frame. Klasifikasi Frame dilakukan dengan menginput data berupa Video gerakan ke model yang sudah ditraining tanpa memberi pengaruh pada weight hasil training sebelumnya. Model kemudian akan memberikan output berupa prediksi dari setiap frame dan menyimpannya dalam bentuk array.
+
+Pada tahap pengembangan sistem. data yang akan dimasukkan ke dalam \textit{pretrained} model tersebut adalah \textit{Test Dataset} yang didapat dari \textit{Train \& Test Data Split} pada bagian \ref{subsec:traintestsplit}. Model kemudian akan mengklasifikasikan dataset tersebut dan memberikan outputnya dalam bentuk array yang dapat digunakan pada tahap evaluasi model.
+
+Untuk tahap testing, proses klasifikasi memiliki alur input data yang berbeda dimana data dalam bentuk sebuah video yang berisikan kombinasi urutan gerakan cuci tangan akan di ekstraksi ke dalam bentuk frame. Data ini tidak memiliki label seperti halnya dataset yang digunakan pada saat training kemudian akan dimasukkan ke dalam model. output dari klasifikasi ini akan nantinya digunakan pada tahap \textit{Moving Average}. Alur Klasifikasi pada tahap penggunaan ini dapat dilihat pada gambar \ref{fig:kerjasistem}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.9\columnwidth]{gambar/kerjasistem.png}
+	\caption{Sistem Klasifikasi Gerakan Video Cuci Tangan}
+	\label{fig:kerjasistem}
+\end{figure}
+
+\subsection{Moving Average}
+\label{subsec:movingaverage}
+
+Moving Average digunakan untuk menggambungkan dan "merata-ratakan" hasil klasifikasi gerakan dari output klasifikasi frame. Ini digunakan agar output dari sistem ini adalah berupa hasil klasifikasi gerakan per satuan waktu. Pada tahap ini, ditentukan \textit{Window Size} yang didefinisikan dengan \textit{Deque (Double-ended Queue)}. Window Size dapat diatur sesuai kebutuhan dengan minimal 24 frame atau sesuai dengan \textit{FPS} dari Video Input. Semakin panjang Deque yang digunakan, maka akan semakin lama proses Moving Average pada setiap gerakan. 
+
+Hasil dari Moving Average dituliskan pada frame-frame yang diklasifikasikan. Pada bagian outputnya, frame-frame tersebut akan disatukan kembali dan di tampilkan dalam wujud video hasil klasifikasi. Contoh Hasil klasifikasi beserta teks keterangannya dapat dilihat pada gambar \ref{fig:contohhasil}
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.9\columnwidth]{gambar/contohhasilklasifikasi.png}
+	\caption{Contoh Hasil Klasifikasi}
+	\label{fig:contohhasil}
+\end{figure}
